@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button class="botaoR">Adicione</button>
+        
+    </div>
+
+    <script>
+
+    function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+    }
+
+        var n=0;
+        var buttonElementR = document.querySelector('button.botaoR');
+        buttonElementR.onclick = function(){
+            var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.id = 'caixa' + n;
+
+            var conElement =document.querySelector('#app');
+            conElement.appendChild(boxElement);
+            var caixa = document.getElementById('caixa' + n);
+            caixa.onmouseover = function(){
+                console.log(caixa);
+                var newColor = getRandomColor();
+                caixa.style.backgroundColor = newColor;
+            }
+            n++;
+        }
+
+    </script>
+</body>
+
+</html>

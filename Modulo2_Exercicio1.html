@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button class="botaoR">Vermelho</button>
+        <button class="botaoG">Verde</button>
+        <button class="botaoB">Azul</button>
+    </div>
+
+    <script>
+        var buttonElementR = document.querySelector('button.botaoR');
+        buttonElementR.onclick = function(){
+            var boxElement = document.createElement('div');
+                
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+
+            var conElement =document.querySelector('#app');
+            conElement.appendChild(boxElement);
+        }
+        var buttonElementG = document.querySelector('button.botaoG');
+        buttonElementG.onclick = function(){
+            var boxElement = document.createElement('div');
+               
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#0f0';
+
+            var conElement =document.querySelector('#app');
+            conElement.appendChild(boxElement);
+        }
+        var buttonElementB = document.querySelector('button.botaoB');
+        buttonElementB.onclick = function(){
+            var boxElement = document.createElement('div');
+               
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#00f';
+
+            var conElement =document.querySelector('#app');
+            conElement.appendChild(boxElement);
+        }
+    </script>
+</body>
+
+</html>

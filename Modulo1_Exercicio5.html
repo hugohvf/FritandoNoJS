@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+       
+    </div>
+
+    <script>
+       var usuarios = [
+        {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+        ];
+
+        function imp(users){
+            for(let i of users){ //var i=0;i<usuarios.lenght;i++
+            console.log("O " + i.nome + " possui as habilidades: " + i.habilidades.join(', '));
+        }
+        }
+        imp(usuarios);
+
+    </script>
+</body>
+
+</html>

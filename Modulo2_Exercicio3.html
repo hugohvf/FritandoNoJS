@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    
+    <div id="app">
+        
+    </div>
+
+    <script>
+
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+        for(let i of nomes){
+            var uhElement = document.createElement('uh');
+
+            var textElement = document.createTextNode('● ' + i);
+            uhElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(uhElement);
+
+            var linebreak = document.createElement('br');
+            containerElement.appendChild(linebreak);
+        }
+        
+    </script>
+</body>
+
+</html>
